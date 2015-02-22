@@ -1,16 +1,32 @@
 
 #profile{
 	width:50px;
-   height:50px;
+	height:50px;
 }
-.panel{
-	padding-left: 10px;
 
+.panel1{
+	height: 10%;
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 }
-.home{
-	width: 140px;
-    height: 31px;
-    border-radius: 10px;
-    background: antiquewhite;
-    margin-top: 8px;
+
+.panel2{
+	height: 90%;
+	width: 100%;
+}
+
+.selectors{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: antiquewhite;
+	margin-top: 1%;
+	font-size: 16vw;
+}
+
+.sign{
+	font-size: 6vw;
+	background: antiquewhite;
 }
