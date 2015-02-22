@@ -4,6 +4,18 @@
 	height:50px;
 }
 
+.less{
+	visibility:visible;
+}
+
+.more{
+	visibility:hidden;
+}
+
+body{
+	background-color: lightgreen;
+}
+
 .panel1{
 	height: 10%;
 	width: 100%;
@@ -22,7 +34,7 @@
 	height: 100%;
 	border-radius: 10px;
 	background: antiquewhite;
-	margin-top: 1%;
+	margin-top: 3%;
 	font-size: 16vw;
 }
 
