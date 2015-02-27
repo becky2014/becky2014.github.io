@@ -1,38 +1,55 @@
 
 #profile{
+
 	width:100%;
    height:100%;
+
 }
 
-html{
-	height: 100%;
+.less{
+	visibility:visible;
+}
 
+.more{
+	visibility:hidden;
 }
 
 body{
-	height: 90%;
+	background-color: lightgreen;
 }
 
-.homePage{
-	height: 20%;
-}
-
-.signin{
-	width: 20%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.panel{
-	padding-left: 2%;
-	height: 50%;
-}
-
-.home{
+.panel1{
+	height: 10%;
 	width: 100%;
-    height: 100%;
-    border-radius: 2%;
-    background: antiquewhite;
-    margin-top: .5%;
-    font-size: 8vw;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
 }
+
+.panel2{
+	height: 90%;
+	width: 100%;
+}
+
+.selectors{
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background: antiquewhite;
+	margin-top: 3%;
+	font-size: 16vw;
+}
+
+.sign{
+	font-size: 6vw;
+	background: antiquewhite;
+}
+
+#head1{
+	font-size:30px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	font-family: calibri,serif;
+}
+
