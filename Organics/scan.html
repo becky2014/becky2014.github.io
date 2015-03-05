@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="ratchet/css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="ratchet/js/ratchet.js"></script>
+
+    <!-- jquery plugin -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <!-- for resizeable we need jquery ui css file , we can find the link by searching jquery ui cdn google -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+
+    <link href="ionicons/css/ionicons.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+   #button1{
+     /*background-color: red;*/
+   }
+   .table-view-cell{
+     height:83px;
+     cursor:pointer;
+   }
+   .header{
+     margin:0;
+     padding:0;
+   }
+   .table-view{
+     position:relative;
+     bottom:40px;
+     background-color:#FDFAF7;
+   }
+   #RatPri{
+     width:60px;
+   }
+   #button1{
+     width:60px;
+   }
+
+   .imageFile{
+    /*padding-bottom:50px;*/
+      position:relative;
+      bottom:5px;
+      /*float:left;*/
+   }
+   .item{
+     position:relative;
+     bottom:80px;
+     left:80px;
+   }
+   .badge{
+    font-size:25px;
+    text-align: center;
+    width:65px;
+    background-color:#19AA19;
+    color:white;
+   }
+   .icon{
+     /*color:red;*/
+   }
+   .bar{
+     background-color:#F0EDE4;
+   }
+
+   .pull-left{
+     background-color:#EEEEEE;
+   }
+
+   .pull-right{
+     background-color:#EEEEEE;
+   }
+
+   .item{
+     /*width:80px;*/
+     border-left:1px solid #CCCCCC;
+     margin-left:2px;
+     padding-left:15px;
+     height:70px;
+   }
+
+  </style>
+  <body onload="">
+    <!-- top bar -->
+    <header class="bar bar-nav">
+      <button class="btn pull-left" id="button1"><
+      </button>
+      <h1 class="title">Scan your item</h1>
+   </header>
+
+   <!-- middle content -->
+  <video id="video"></video>
+
+     <button id = "scan" class="btn btn-primary btn-block"
+ onclick="location.href = 'homepage.html';" data-transition="slide-in">Have trouble scanning items?</button>     
+
+  <!-- bottom bar -->
+   <nav class="bar bar-tab">
+  <a class="tab-item active" href="#">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-ios-location-outline"></i>
+    <span class="tab-label">Store</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-qr-scanner"></i>
+    <span class="tab-label">Scan</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-search"></span>
+    <span class="tab-label">Search</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
+</nav>
+  </body>
+
+</html>
+
+
+<script>
+$(document).ready(function(){
+
+    navigator.getMedia = (
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia ||
+        navigator.msGetUserMedia
+    );
+    
+    if (navigator.getMedia) {    
+         navigator.getMedia(
+             {
+                audio : false,
+                video : true
+             },
+             function (stream) {
+                if (navigator.mozGetUserMedia) {
+                     video.mozSrcObject = stream;
+                } else {
+                     var vendorURL = window.URL || window.webkitURL;
+                     video.src = vendorURL.createObjectURL(stream);
+                }
+
+                video.play();
+             },
+             function (err) {
+                 alert("OH GOD WHAT HAPPENED!?!??!!! " + err);
+             }
+        );
+    }
+    else
+    {
+        alert("Sorry, your browser does not support WebRTC.");
+    }
+})
+</script>
+
+
+<style>
+
+#video{ 
+  margin-top: 20%;
+  margin-left: 10%;
+  width:80%;
+  height:50%;
+
+  /* video border */ 
+
+  border: 1px solid grey; 
+  
+  border-radius: 10px; 
+  /* tranzitionstransitions applied to the vodeovideo element */ 
+  -moz-transition: all 1s ease-in-out; 
+  -webkit-transition: all 1s ease-in-out; 
+  -o-transition: all 1s ease-in-out; 
+  -ms-transition: all 1s ease-in-out; 
+  transition: all 1s ease-in-out; }
+
+
+#scan{
+
+  margin-top: 10%;
+  width: 80%;
+  height:10%;
+  margin-left: 10%; 
+}
+
+</style>
