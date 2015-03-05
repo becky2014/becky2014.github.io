@@ -1,16 +1,105 @@
 
 #profile{
-	width:50px;
-   height:50px;
+    width:50px;
+    height:50px;
 }
-.panel{
-	padding-left: 10px;
 
+.less{
+    visibility:visible;
 }
-.home{
-	width: 140px;
-    height: 31px;
+
+.more{
+    visibility:hidden;
+}
+
+body{
+    background-color: forestgreen;
+}
+
+.panel1{
+    height: 10%;
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+.panel2{
+    height: 90%;
+    width: 100%;
+}
+
+.selectors{
+    font-family: helvetica;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
     background: antiquewhite;
-    margin-top: 8px;
+    margin-top: 3%;
+    font-size: 14vw;
 }
+
+.sign{
+    font-size: 6vw;
+    background: antiquewhite;
+    border-radius: 10px;
+}
+
+.searchpanel{
+    border-radius: 5px;
+    margin-top: 3%;
+}
+
+.splitpanel{
+    margin-top: 60%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.splitselectors{
+    font-family: helvetica;
+    width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    background: antiquewhite;
+    margin-top: 3%;
+    font-size: 12vw;
+}
+
+#head1{
+    font-size:30px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    font-family: calibri,serif;
+    font-weight: bold;
+}
+
+#map-canvas{
+    margin-top: 10%;
+    margin-left:auto;
+    margin-right:auto;
+    height: 300px;
+    width: 300px;
+}
+
+.checkbox{
+    height: 10%;
+    width: 100%;
+    margin-left:41%;
+    margin-right:auto;
+    font-size: 20px;
+   
+}
+
+h3{
+      margin-left: 41%;
+}
+
+input[type=checkbox] {
+    zoom:1.3;
+}
+
+
+
