@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="ratchet/css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="ratchet/js/ratchet.js"></script>
+
+    <!-- jquery plugin -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <!-- for resizeable we need jquery ui css file , we can find the link by searching jquery ui cdn google -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+
+    <link href="ionicons/css/ionicons.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <style>
+  body{
+    margin:0;
+    padding:0;
+  }
+   #button1{
+     /*background-color: red;*/
+   }
+   .table-view-cell{
+     height:83px;
+     cursor:pointer;
+   }
+   .header{
+     margin:0;
+     padding:0;
+   }
+   .table-view{
+     position:relative;
+     bottom:40px;
+     background-color:#FDFAF7;
+   }
+   #RatPri{
+     width:60px;
+   }
+   #button1{
+     width:60px;
+   }
+
+   .imageFile{
+    /*padding-bottom:50px;*/
+      position:relative;
+      bottom:5px;
+      /*float:left;*/
+   }
+   .item{
+     position:relative;
+     bottom:80px;
+     left:80px;
+   }
+   .badge{
+    font-size:25px;
+    text-align: center;
+    width:65px;
+    background-color:#19AA19;
+    color:white;
+   }
+   .icon{
+     /*color:red;*/
+   }
+   .bar{
+     background-color:#F0EDE4;
+   }
+
+   .pull-left{
+     background-color:#EEEEEE;
+   }
+
+   .pull-right{
+     background-color:#EEEEEE;
+   }
+
+   .item{
+     /*width:80px;*/
+     border-left:1px solid #CCCCCC;
+     margin-left:2px;
+     padding-left:15px;
+     height:70px;
+   }
+
+  </style>
+  <body onload="windowsonload()">
+    <!-- top bar -->
+    <header class="bar bar-nav">
+      <button class="btn pull-left" id="button1"><
+      </button>
+      <button class="btn pull-right" id="RatPri">Price</button>
+      <h1 class="title">Bread</h1>
+   </header>
+
+   <!-- middle content -->
+
+     <ul class="table-view">
+      <li class="table-view-cell">space</li>
+      <li class="table-view-cell" id="item1">
+        <img class="imageFile" src="image/apricot.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Whole Food<h><p >APRICOT BREAD</p></div>
+      </li>
+      <li class="table-view-cell" id="item2">
+        <img class="imageFile" src="image/flatbread.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Jwel Osco<h><p >Bing</p></div>
+      </li>
+      <li class="table-view-cell" id="item3" >
+        <img class="imageFile" src="image/currybread.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Jwel Osco<h><p >Curry bread</p></div>
+      </li>
+      <li class="table-view-cell" id="item4">
+        <img class="imageFile" src="image/coconutbread.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Whole Food<h><p >Coconut bread</p></div>
+      </li>
+      <li class="table-view-cell" id="item5">
+        <img class="imageFile" src="image/pretzel.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Traser Joe's<h><p >Stuffed Soft Pretzels</p></div>
+      </li>
+      <li class="table-view-cell" id="item6">
+        <img class="imageFile" src="image/baconbread.jpg" alt="Flat Bread" width="70" height="70">
+        <div class="item"><h>Whole Food<h><p >Bacon Bread</p></div>
+      </li>
+    </ul>
+
+
+  <!-- bottom bar -->
+   <nav class="bar bar-tab">
+  <a class="tab-item active" href="#">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-ios-location-outline"></i>
+    <span class="tab-label">Store</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-qr-scanner"></i>
+    <span class="tab-label">Scan</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-search"></span>
+    <span class="tab-label">Search</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
+</nav>
+
+
+
+  </body>
+
+  <script>
+
+  // item hover effect
+
+  $( ".table-view-cell" )
+  .mouseover(function() {
+    $(this).css('background-color', '#F7F6F2');
+  })
+  .mouseout(function() {
+    $(this).css('background-color', '#FDFAF7;');
+  });
+
+  //
+
+  $( ".pull-right" )
+  .mouseover(function() {
+    $(".pull-right").css('background-color', '#A7A7A7');
+  })
+  .mouseout(function() {
+    $(".pull-right").css('background-color', '#EEEEEE');
+  });
+
+  $( ".pull-left" )
+  .mouseover(function() {
+    $(".pull-left").css('background-color', '#A7A7A7');
+  })
+  .mouseout(function() {
+    $(".pull-left").css('background-color', '#EEEEEE');
+  });
+
+
+
+    // $(".pull-right").hover(function(){
+    //   $(".pull-right").css('background-color', '#A7A7A7');
+    // });
+
+    var item1 = $("#item1").html() +'<span class="badge">A+</span>';
+    var item2 = $("#item2").html() +'<span class="badge">A</span>';
+    var item3 = $("#item3").html() +'<span class="badge">A</span>';
+    var item4 = $("#item4").html() +'<span class="badge">A-</span>';
+    var item5 = $("#item5").html() +'<span class="badge">B+</span>';
+    var item6 = $("#item6").html() +'<span class="badge">B+</span>';
+
+    var price1 = $("#item6").html() +'<span class="badge">$2</span>';
+    var price2 = $("#item1").html() +'<span class="badge">$2.3</span>';
+    var price3 = $("#item2").html() +'<span class="badge">$3.4</span>';
+    var price4 = $("#item4").html() +'<span class="badge">$3.9</span>';
+    var price5 = $("#item5").html() +'<span class="badge">$4</span>';
+    var price6 = $("#item3").html() +'<span class="badge">$4.4</span>';
+
+  function windowsonload(){
+    $("#item1").html(item1);
+    $("#item2").html(item2);
+    $("#item3").html(item3);
+    $("#item4").html(item4);
+    $("#item5").html(item5);
+    $("#item6").html(item6);
+  }
+
+
+
+
+  $('#RatPri').click(function(){
+    if($(this).html() == "Rating"){
+      $(this).text("Price");
+      $("#item1").html(item1);
+      $("#item2").html(item2);
+      $("#item3").html(item3);
+      $("#item4").html(item4);
+      $("#item5").html(item5);
+      $("#item6").html(item6);
+    }else if($(this).text() == "Price"){
+      $(this).text("Rating");
+      console.log(price1);
+      $("#item1").html(price1);
+      $("#item2").html(price2);
+      $("#item3").html(price3);
+      $("#item4").html(price4);
+      $("#item5").html(price5);
+      $("#item6").html(price6);
+    }
+  });
+  </script>
+</html>
