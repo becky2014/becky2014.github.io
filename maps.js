@@ -32,7 +32,7 @@ function Submit() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: "<p>Trader Joe's Evanston</p>"
+         content: "<img src='http://prestonhollow.advocatemag.com/wp-content/uploads/2011/05/Trader-Joes.jpg' width='150' height='150'><br><p>Trader Joe's Evanston</p>"
     });
 
     infowindow.open(map, marker);
