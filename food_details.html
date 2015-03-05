@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>Food Details</title>
 
-<head>
-    <title>Trader Joe's Sodium Gree Whole Wheat Bread</title>
-</head>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
+
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Include the compiled Ratchet CSS -->
+    <link href="css/ratchet.css" rel="stylesheet">
+
+    <!-- Include the compiled Ratchet JS -->
+    <script src="breadlist/ratchet/js/ratchet.js"></script>
+     <link href="breadlist/ionicons/css/ionicons.css" rel="stylesheet" type="text/css" />
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/ratchet.js"></script>
+  </head>
 
 <body>
     <div class = "panel1">
@@ -43,15 +61,15 @@
             <div class="review-sidebar-content">
                 <div class="ypassport media-block">
                     <div class="media-avatar">
-                        <div class="photo-box pb-60s" data-hovercard-id="EXAMPLE">
-                        <img alt="EXAMPLE" class="photo-box-img" height="60" src="EXAMPLE" width="60">
+                        <div class="photo-box pb-60s">
+                        <img id="Charlene" class="photo-box-img" height="60" src="images/user pic 60x60.jpg" width="60">
                         </div>
                     </div>
 
                     <div class="media-story">
                         <ul class="user-passport-info">
                             <li class="user-name">
-                            <a class="user-display-name" href="EXAMPLE" data-hovercard-id="EXAMPLE">EXAMPLE</a>
+                            <a class="user-display-name" href="EXAMPLE" data-hovercard-id="EXAMPLE">Charlene</a>
                             </li>
                             <li class="user-location">
                             <b>Evanston, IL</b>
@@ -73,11 +91,81 @@
 </ul>
 
   
-    <div class="Bottom">
-        <button class="Menu Buttom">Scan</button>
-        <button class="Menu Buttom">Home</button>
-    </div>
+<!--bottom bar -->
+
+<nav class="bar bar-tab">
+  <a class="tab-item active" href="#">
+    <span class="icon icon-home"></span>
+    <span class="tab-label">Home</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-ios-location-outline"></i>
+    <span class="tab-label">Store</span>
+  </a>
+  <a class="tab-item" href="#">
+    <i class="icon ion-qr-scanner"></i>
+    <span class="tab-label">Scan</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-search"></span>
+    <span class="tab-label">Search</span>
+  </a>
+  <a class="tab-item" href="#">
+    <span class="icon icon-gear"></span>
+    <span class="tab-label">Settings</span>
+  </a>
+</nav>
 	
+
+<style>
+
+#video{
+
+    margin-top: 20%;
+    margin-left: 10%;
+    width:80%;
+    height:50%;
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #ccc;
+    
+}
+
+#scan{
+
+  margin-top: 10%;
+  width: 60%;
+  height:10%;
+  margin-left: 20%; 
+  background-color: #FF8E0B;
+  color: #FFFFFF;
+  font-size: 20px;
+
+}
+
+#search{
+
+}
+
+.backscreen{
+
+
+    background-color: #F0EDE4;
+    height: 100%;
+}
+
+.table-view-cell{
+    background-color: #F0EDE4;
+
+}
+
+
+ .bar{
+     background-color:#F0EDE4;
+
+   }
+
+
+</style>
 	
 	
 </body>
