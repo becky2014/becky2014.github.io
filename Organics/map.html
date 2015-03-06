@@ -109,7 +109,7 @@
         <br><br>
         <div id="head1"></div>
   <div class="searchpanel">
-        <input id="search" type="text" name="Search" placeholder="Search Food...">
+        <input id="searchb" type="text" name="Search" placeholder="Search Food...">
         <center>
         <button id = "btn1" class="btn" onclick="Submit()" ><span class="icon icon-search">Search Store</span></button>
         </center>
@@ -160,7 +160,7 @@ function initialize() {
 google.maps.event.addDomListener(window, "load", initialize);
 
 function Submit() {
-    search_text = document.getElementById("search");
+    search_text = document.getElementById("searchb");
     // ignore
 
     var marker = new google.maps.Marker({
