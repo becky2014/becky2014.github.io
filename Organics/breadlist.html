@@ -126,7 +126,7 @@
       </li>
       <li class="table-view-cell" id="item5">
         <img class="imageFile" src="image/pretzel.jpg" alt="Flat Bread" width="70" height="70">
-        <div class="item"><h>Traser Joe's<h><p >Stuffed Soft Pretzels</p></div>
+        <div class="item"><h>Trader Joe's<h><p >Stuffed Soft Pretzels</p></div>
       </li>
       <li class="table-view-cell" id="item6">
         <img class="imageFile" src="image/baconbread.jpg" alt="Flat Bread" width="70" height="70">
@@ -136,28 +136,29 @@
 
 
   <!-- bottom bar -->
-   <nav class="bar bar-tab">
-  <a class="tab-item active" href="#">
-    <span class="icon icon-home"></span>
-    <span class="tab-label">Home</span>
+  <nav class="bar bar-tab">
+
+  <a id="home"  class="tab-item" >
+   <span class="icon icon-home"></span>
+   <span class="tab-label">Home</span>
   </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-ios-location-outline"></i>
-    <span class="tab-label">Store</span>
+  <a id="store" class="tab-item" href="#">
+   <i class="icon ion-ios-location-outline"></i>
+   <span class="tab-label">Store</span>
   </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-qr-scanner"></i>
-    <span class="tab-label">Scan</span>
+  <a id="scan" class="tab-item" href="#">
+   <i class="icon ion-qr-scanner"></i>
+   <span class="tab-label">Scan</span>
   </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-search"></span>
-    <span class="tab-label">Search</span>
+  <a id="search"  class="tab-item" href="#">
+   <span class="icon icon-search"></span>
+   <span class="tab-label">Search</span>
   </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-gear"></span>
-    <span class="tab-label">Settings</span>
+  <a id="preference"  class="tab-item" href="#">
+   <span class="icon icon-gear"></span>
+   <span class="tab-label">Settings</span>
   </a>
-</nav>
+  </nav>
 
 
 
@@ -244,6 +245,38 @@
       $("#item5").html(price5);
       $("#item6").html(price6);
     }
+  });
+
+
+
+
+  $("#button1").click(function(){
+    location.href = "javascript:history.back()";
+  });
+
+  $("#home").click(function(){
+    location.href = "HomePage.html";
+  });
+  $("#store").click(function(){
+    location.href = "map.html";
+  });
+  $("#scan").click(function(){
+    location.href = "scan.html";
+  });
+  $("#search").click(function(){
+    location.href = "food_search.html";
+  });
+  $("#preference").click(function(){
+    location.href = "preference.html";
+  });
+
+  $("#searchbottom").click(function(){
+    location.href = "breadlist.html";
+  });
+
+
+  $("#item5").click(function(){
+    location.href = "Comment.html";
   });
   </script>
 </html>

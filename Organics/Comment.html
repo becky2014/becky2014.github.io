@@ -138,12 +138,19 @@
       margin:0;
       padding:0;
   }
+  #button1{
+    width:60px;
+  }
 </style>
 
   <body>
 
     <header class="bar bar-nav">
-      <h1 class="title">Traser Joe's Stuffed Soft Pretzels</h1>
+      <button class="btn pull-left" id="button1"><
+      </button>
+      <button class="btn pull-right" id="button2">Find
+      </button>
+      <h1 class="title">Stuffed Soft Pretzels</h1>
     </header>
     <div class="container">
       <div id="topbar">
@@ -194,32 +201,56 @@
 
 
     <nav class="bar bar-tab">
-   <a class="tab-item" href="#">
+
+    <a id="home"  class="tab-item" >
      <span class="icon icon-home"></span>
      <span class="tab-label">Home</span>
-   </a>
-   <a class="tab-item" href="#">
+    </a>
+    <a id="store" class="tab-item" href="#">
      <i class="icon ion-ios-location-outline"></i>
      <span class="tab-label">Store</span>
-   </a>
-   <a class="tab-item" href="#">
+    </a>
+    <a id="scan" class="tab-item" href="#">
      <i class="icon ion-qr-scanner"></i>
      <span class="tab-label">Scan</span>
-   </a>
-   <a class="tab-item" href="#">
+    </a>
+    <a id="search"  class="tab-item" href="#">
      <span class="icon icon-search"></span>
      <span class="tab-label">Search</span>
-   </a>
-   <a class="tab-item" href="#">
+    </a>
+    <a id="preference"  class="tab-item" href="#">
      <span class="icon icon-gear"></span>
      <span class="tab-label">Settings</span>
-   </a>
- </nav>
+    </a>
+    </nav>
 
   </body>
 </html>
 
 <script>
+$("#button1").click(function(){
+  location.href = "javascript:history.back()";
+});
+
+$("#button2").click(function(){
+  location.href = "map.html";
+});
+
+$("#home").click(function(){
+  location.href = "HomePage.html";
+});
+$("#store").click(function(){
+  location.href = "map.html";
+});
+$("#scan").click(function(){
+  location.href = "scan.html";
+});
+$("#search").click(function(){
+  location.href = "food_search.html";
+});
+$("#preference").click(function(){
+  location.href = "preference.html";
+});
 
 
 

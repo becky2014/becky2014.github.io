@@ -31,6 +31,8 @@
 <div class="backscreen">
 
     <header class="bar bar-nav">
+      <button class="btn pull-left" id="button1"><
+      </button>
 
       <h1 class="title">Food Search</h1>
    </header>
@@ -39,7 +41,7 @@
 </br></br></br>
     <div class = "panel1">
 
-      <input id="search" type="text" name="search" placeholder="Please type product or brand name ">
+      <input id="searchbar" type="text" name="searchbar" placeholder="Please type product or brand name ">
          <br>
          Search Records
         <ul class="table-view">
@@ -60,7 +62,7 @@
 
         <div class="searchpanel">
 
-      <button id = "scan" class="btn">
+      <button id = "searchbottom" class="btn">
       <span class="icon icon-search"></span>
         Search Food
       </button>
@@ -73,27 +75,29 @@
 
 <!--bottom bar -->
 
+
 <nav class="bar bar-tab">
-  <a class="tab-item active" href="#">
-    <span class="icon icon-home"></span>
-    <span class="tab-label">Home</span>
-  </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-ios-location-outline"></i>
-    <span class="tab-label">Store</span>
-  </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-qr-scanner"></i>
-    <span class="tab-label">Scan</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-search"></span>
-    <span class="tab-label">Search</span>
-  </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-gear"></span>
-    <span class="tab-label">Settings</span>
-  </a>
+
+<a id="home"  class="tab-item" >
+ <span class="icon icon-home"></span>
+ <span class="tab-label">Home</span>
+</a>
+<a id="store" class="tab-item" href="#">
+ <i class="icon ion-ios-location-outline"></i>
+ <span class="tab-label">Store</span>
+</a>
+<a id="scan" class="tab-item" href="#">
+ <i class="icon ion-qr-scanner"></i>
+ <span class="tab-label">Scan</span>
+</a>
+<a id="search"  class="tab-item" href="#">
+ <span class="icon icon-search"></span>
+ <span class="tab-label">Search</span>
+</a>
+<a id="preference"  class="tab-item" href="#">
+ <span class="icon icon-gear"></span>
+ <span class="tab-label">Settings</span>
+</a>
 </nav>
 
 
@@ -103,10 +107,38 @@
 
 <script>
 
+
+$("#button1").click(function(){
+  location.href = "javascript:history.back()";
+});
+
+$("#home").click(function(){
+  location.href = "HomePage.html";
+});
+$("#store").click(function(){
+  location.href = "map.html";
+});
+$("#scan").click(function(){
+  location.href = "scan.html";
+});
+$("#search").click(function(){
+  location.href = "food_search.html";
+});
+$("#preference").click(function(){
+  location.href = "preference.html";
+});
+
+$("#searchbottom").click(function(){
+  location.href = "breadlist.html";
+});
+
 </script>
 
 
 <style>
+#button1{
+  width:60px;
+}
 
 #video{
 
@@ -119,7 +151,7 @@
 
 }
 
-#scan{
+#searchbottom{
 
   margin-top: 10%;
   width: 60%;
@@ -131,9 +163,8 @@
 
 }
 
-#search{
 
-}
+
 
 .backscreen{
 

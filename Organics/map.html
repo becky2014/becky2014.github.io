@@ -101,7 +101,7 @@
     <header class="bar bar-nav">
       <button class="btn pull-left" id="button1"><
       </button>
-   
+
       <h1 class="title">Search Store</h1>
    </header>
 
@@ -116,32 +116,34 @@
         </center>
         </div>
     </div>
-   
+
     <div id="map-canvas"></div>
 
   <!-- bottom bar -->
-   <nav class="bar bar-tab">
-  <a class="tab-item active" href="#">
-    <span class="icon icon-home"></span>
-    <span class="tab-label">Home</span>
+  <nav class="bar bar-tab">
+
+  <a id="home"  class="tab-item" >
+   <span class="icon icon-home"></span>
+   <span class="tab-label">Home</span>
   </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-ios-location-outline"></i>
-    <span class="tab-label">Store</span>
+  <a id="store" class="tab-item" href="#">
+   <i class="icon ion-ios-location-outline"></i>
+   <span class="tab-label">Store</span>
   </a>
-  <a class="tab-item" href="#">
-    <i class="icon ion-qr-scanner"></i>
-    <span class="tab-label">Scan</span>
+  <a id="scan" class="tab-item" href="#">
+   <i class="icon ion-qr-scanner"></i>
+   <span class="tab-label">Scan</span>
   </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-search"></span>
-    <span class="tab-label">Search</span>
+  <a id="search"  class="tab-item" href="#">
+   <span class="icon icon-search"></span>
+   <span class="tab-label">Search</span>
   </a>
-  <a class="tab-item" href="#">
-    <span class="icon icon-gear"></span>
-    <span class="tab-label">Settings</span>
+  <a id="preference"  class="tab-item" href="#">
+   <span class="icon icon-gear"></span>
+   <span class="tab-label">Settings</span>
   </a>
-</nav>
+  </nav>
+
   </body>
 
   <script>
@@ -150,7 +152,7 @@ var map;
 
 function initialize() {
     var mapOptions = {
-        zoom: 14, 
+        zoom: 14,
         center: new google.maps.LatLng(42.052, -87.683)
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -168,7 +170,7 @@ function Submit() {
         title: "Trader Joe's"
     });
 
-    // don't visit this page twice or this will look silly. shouldn't affect functionality though. 
+    // don't visit this page twice or this will look silly. shouldn't affect functionality though.
     // maybe this can be fixed later, code already exists for preferences.js
 
     google.maps.event.addListener(marker, "click", function() {
@@ -186,6 +188,37 @@ function Submit() {
     infowindow.open(map, marker);
 
 }
+
+
+$("#button1").click(function(){
+  location.href = "javascript:history.back()";
+});
+
+$("#home").click(function(){
+  location.href = "HomePage.html";
+});
+$("#store").click(function(){
+  location.href = "map.html";
+});
+$("#scan").click(function(){
+  location.href = "scan.html";
+});
+$("#search").click(function(){
+  location.href = "food_search.html";
+});
+$("#preference").click(function(){
+  location.href = "preference.html";
+});
+
+
+location.href = "javascript:history.back()"
+console.log(location.href);
+if(location.href == "http://becky2014.github.io/Organics/Comment.html"){
+  Submit();
+}
+
+
+
 
   </script>
   <style>
