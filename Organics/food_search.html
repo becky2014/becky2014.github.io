@@ -23,6 +23,19 @@
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
   </head>
+
+  <style>
+    #record{
+      color:black;
+    }
+
+    #searchbar{
+      width:104%;
+      /*width:1000px;*/
+    }
+
+  </style>
+
   <body>
 
     <!-- Make sure all your bars are the first things in your <body> -->
@@ -41,10 +54,14 @@
 </br></br></br>
     <div class = "panel1">
 
-      <input id="searchbar" type="text" name="searchbar" placeholder="Please type product or brand name ">
-         <br>
-         Search Records
         <ul class="table-view">
+          <li class="table-view-cell">
+          <input id="searchbar" type="text" name="searchbar" placeholder="Please type product or brand name ">
+          </li>
+          <!-- <br> -->
+          <li class="table-view-cell">
+          <p id="record">Search Records</p>
+          </li>
           <li class="table-view-cell">
               <input type="checkbox" /> Nuts
           </li>
